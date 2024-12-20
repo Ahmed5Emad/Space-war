@@ -9,7 +9,7 @@ int selectedButton = -1;
 int gameState = 0;
 int level = 0;
 int score = 0;
-int lives = 10;
+int lives = 3;
 int maxBullets = 1;
 
 int levelTransitionTimer = 120;
@@ -27,8 +27,8 @@ Boss boss;
 
 int meteorsDestroyed = 0; //New variable to track destroyed meteors
 int meteorsToDestroyLevel2 = 20; // Number of meteors to destroy in Level 2
-long levelStartTime = 0; //Variable to store the start time of the level
-int enemiesInFormation = 0; // Track the number of enemies in the current formation
+long levelStartTime = 0; 
+int enemiesInFormation = 0; 
 long lastShotTime = 0;  
 int shotCooldown = 250; // Bullet cooldown in milliseconds
 long lastBulletTime = 0;
@@ -62,7 +62,7 @@ void setup() {
     loadImage("small meteor3.png")
   };
 
-  font = createFont("SpaceGames-K7zKD.otf", 80); // Verify font path
+  font = createFont("SpaceGames-K7zKD.otf", 80); 
   textFont(font);
 
   player = new Player(playerImg);
@@ -587,7 +587,7 @@ void handleDebugMenuClick() {
     level = selectedButton - 1;
     levelTransitionTimer = 120;
     selectedButton = -1;
-  } else if (selectedButton == 0) { //Corrected: Handle Back button correctly
+  } else if (selectedButton == 0) {
     gameState = 0;
     selectedButton = -1;
   }
